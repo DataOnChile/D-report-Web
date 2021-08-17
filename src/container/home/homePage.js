@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const HomePage = () => {
-    return (
-        <div>
-            casa
-        </div>
-    )
-}
+  return (
+    <div className="containerDashboardPage">
+      <div>componente topbar</div>
+      <div>
+        <div>componente menu</div>
+        <div>componete dashhome</div>
+      </div>
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

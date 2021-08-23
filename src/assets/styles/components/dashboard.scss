@@ -1,0 +1,142 @@
+@import "../gral.scss";
+
+.containerDashBoard {
+  background-color: $color-black;
+  height: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+  .topSideDashboard {
+    background-color: $color-black;
+    color: $color-light-grey;
+    height: 8%;
+    padding: 0% 5% 0% 2.1%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .line {
+      background-color: $color-white;
+    }
+    .eachContainerTopSide {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      .place,
+      .calendar {
+        margin-right: 10px;
+      }
+    }
+  }
+  .bottomSideDashboard {
+    color: $color-black;
+    background-color: $color-light-grey;
+    border-radius: 45px 45px 0px 0px;
+    height: 92%;
+    display: flex;
+    flex-flow: column nowrap;
+    .topBarBottomSideDashboard {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 1px 2px #00000049;
+      .leftSideTopBarBottomSideDashboard {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 1.5% 4% 1.5% 3%;
+        .title {
+          font-weight: bold;
+          font-size: 18px;
+          color: $color-black;
+          margin-right: 20px;
+          .subtitle {
+            font-weight: lighter;
+            font-size: 16px;
+          }
+        }
+      }
+      .rightSideTopBarBottomSideDashboard {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: $color-green;
+        padding: 1.5% 4% 1.5% 2%;
+        color: $color-black;
+        font-weight: bold;
+        border-radius: 0px 45px 0px 0px;
+      }
+    }
+    .allAssigments {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      .newAssignments {
+        padding: 2.5% 5% 0% 3%;
+        width: 50%;
+        .titleAssigments {
+          font-weight: bold;
+          font-size: 16px;
+          color: $color-black;
+        }
+        .containerListAssigments {
+          display: flex;
+          flex-flow: column nowrap;
+          .eachAssigment {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 1px 2px #00000029;
+            padding: 11px 7px 13px 12px;
+            margin-top: 15px;
+            .titleInstallation {
+              font-weight: bold;
+              font-size: 14px;
+              margin-bottom: 9px;
+            }
+            input {
+              padding: 0px 0px 0px 3px;
+            }
+            label {
+              font-size: 13px;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+      .todayAssignments {
+        padding: 2.5% 5% 0% 3%;
+        width: 50%;
+        .titleAssigments {
+          font-weight: bold;
+          font-size: 16px;
+          color: $color-black;
+        }
+        .containerListAssigments {
+          display: flex;
+          flex-flow: column nowrap;
+          .eachAssigment {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 1px 2px #00000029;
+            padding: 11px 7px 13px 12px;
+            margin-top: 15px;
+            .titleInstallation {
+              font-weight: bold;
+              font-size: 14px;
+              margin-bottom: 9px;
+            }
+            input {
+              padding: 0px 0px 0px 3px;
+            }
+            label {
+              font-size: 13px;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

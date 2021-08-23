@@ -1,0 +1,29 @@
+@import "../gral.scss";
+
+.containerTopBar {
+  background-color: $color-black;
+  height: 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 2%;
+  .eachContainerTopBar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $color-light-grey;
+    font-size: 14px;
+    .profile{
+      margin-left: 24px;
+    }
+    .containerLogoDReport {
+      margin-left: 24px;
+      width: 80px;
+      height: auto;
+      .logoDReport {
+        width: 100%;
+      }
+    }
+  }
+}

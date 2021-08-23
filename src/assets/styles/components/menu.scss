@@ -1,0 +1,22 @@
+@import "../gral.scss";
+
+.containerMenu {
+  background-color: $color-black;
+  width: 13%;
+  padding: 7% 0% 5% 2%;
+  display: flex;
+  flex-flow: column nowrap;
+  .insideContainerMenu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 40%;
+    .eachPartMenu {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      color: $color-light-grey;
+
+    }
+  }
+}

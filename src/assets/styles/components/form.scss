@@ -1,0 +1,62 @@
+@import "../gral.scss";
+
+.containerForm {
+  color: $color-black;
+  background-color: $color-light-grey;
+  height: 92%;
+  display: flex;
+  flex-flow: column nowrap;
+  .topSideForm {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-black;
+    border-radius: 0px 0px 45px 45px;
+    padding: 1.5% 4% 1.5% 3%;
+    color: white;
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 12.5px;
+    }
+  }
+  .bottomSideForm {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 1.5% 4% 1.5% 4%;
+    .eachQuestionForm {
+      margin: 0px 50px 50px 50px;
+      .questForm {
+        font-size: 16px;
+        background-color: $color-light-grey;
+        bottom: -12px;
+        left: 10px;
+        position: relative;
+        width: fit-content;
+      }
+      .inputQuestForm {
+        border: 1px solid $color-black;
+        background-color: $color-light-grey;
+        border-radius: 4px;
+        height: 25px;
+        width: 450px;
+        padding: 19px 0px 18px 16px;
+      }
+    }
+  }
+  .btnForm {
+    background-color: $color-green;
+    color: $color-black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px #00000049;
+    height: 45px;
+    margin: 1.5% 4% 1.5% 4%;
+    width: 100px;
+    align-self: flex-end;
+  }
+}

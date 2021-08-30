@@ -8,15 +8,15 @@
   flex-flow: column nowrap;
   .insideContainerMenu {
     display: flex;
+    position: fixed;
     flex-flow: column nowrap;
     justify-content: space-between;
     height: 40%;
     .eachPartMenu {
-      display: flex;
+      display: block;
       flex-flow: row nowrap;
       align-items: center;
       color: $color-light-grey;
-
     }
   }
 }

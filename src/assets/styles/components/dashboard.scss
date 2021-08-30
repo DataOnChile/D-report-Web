@@ -67,50 +67,21 @@
     }
     .allAssigments {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       justify-content: space-between;
-      .newAssignments {
-        padding: 2.5% 5% 0% 3%;
-        width: 50%;
-        .titleAssigments {
-          font-weight: bold;
-          font-size: 16px;
-          color: $color-black;
-        }
-        .containerListAssigments {
-          display: flex;
-          flex-flow: column nowrap;
-          .eachAssigment {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0px 1px 2px #00000029;
-            padding: 11px 7px 13px 12px;
-            margin-top: 15px;
-            .titleInstallation {
-              font-weight: bold;
-              font-size: 14px;
-              margin-bottom: 9px;
-            }
-            input {
-              padding: 0px 0px 0px 3px;
-            }
-            label {
-              font-size: 13px;
-              padding-left: 10px;
-            }
-          }
-        }
+      .tableInformationAssigments {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1% 5% 1% 3%;
+        font-weight: bold;
+        font-size: 14px;
+        color: #777777;
       }
-      .todayAssignments {
-        padding: 2.5% 5% 0% 3%;
-        width: 50%;
-        .titleAssigments {
-          font-weight: bold;
-          font-size: 16px;
-          color: $color-black;
-        }
+      .newAssignments {
+          width: 100%;
+
         .containerListAssigments {
           display: flex;
           flex-flow: column nowrap;
@@ -120,20 +91,9 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0px 1px 2px #00000029;
-            padding: 11px 7px 13px 12px;
-            margin-top: 15px;
-            .titleInstallation {
-              font-weight: bold;
-              font-size: 14px;
-              margin-bottom: 9px;
-            }
-            input {
-              padding: 0px 0px 0px 3px;
-            }
-            label {
-              font-size: 13px;
-              padding-left: 10px;
-            }
+            padding: 1% 1% 1% 1%;
+            margin: 1% 4% 0% 2%;
+            font-size: 12px;
           }
         }
       }

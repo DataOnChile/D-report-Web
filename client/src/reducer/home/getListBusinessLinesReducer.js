@@ -4,22 +4,22 @@ const initialState = {
   errorMsg: "",
   status: 0,
 };
-const GetUsersListReducer = (state = initialState, action) => {
+const GetListBusinessLinesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_USERS_LIST_LOADING":
+    case "GET_LIST_BUSINESS_LINES_LOADING":
       return {
         ...state,
         loading: true,
         errorMsg: "",
       };
-    case "RESET_USERS_LIST":
+    case "RESET_GET_LIST_BUSINESS_LINES":
       return {
         ...state,
         data: [],
         loading: false,
         errorMsg: "",
       };
-    case "GET_USERS_LIST_SUCESS":
+    case "GET_LIST_BUSINESS_LINES_SUCESS":
       return {
         ...state,
         loading: false,
@@ -27,14 +27,14 @@ const GetUsersListReducer = (state = initialState, action) => {
         status: action.status,
         errorMsg: "",
       };
-    case "GET_USERS_LIST_FAIL":
+    case "GET_LIST_BUSINESS_LINES_FAIL":
       return {
         ...state,
         loading: false,
-        errorMsg: "Error getUserListReducer",
+        errorMsg: "Error GetUsersListReducer",
       };
     default:
       return state;
   }
 };
-export default GetUsersListReducer;
+export default GetListBusinessLinesReducer;

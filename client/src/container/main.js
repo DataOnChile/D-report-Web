@@ -8,8 +8,15 @@ const Main = () => {
     <div>
       <Router>
         <Switch>
-          <Route path="/" exact component={LoginPage} />
-          <Route path="/home" component={HomePage} />
+          <Route
+            path="/"
+            exact
+            component={LoginPage}
+          />
+          <Route
+            path="/home"
+            component={HomePage}
+          />
         </Switch>
       </Router>
     </div>

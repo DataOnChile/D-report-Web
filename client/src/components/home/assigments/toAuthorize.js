@@ -1,6 +1,52 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import _ from "lodash";
+
+// ACTION
+import {
+  GetListToAuthorizeAction,
+  ResetGetListToAuthorizeAction,
+} from "../../../actions/home/assigments/getListToAuthorizeAction";
 
 const ToAuthorize = () => {
+  const dispatch = useDispatch();
+  const getListToAuthorizeAssigments = useSelector(
+    (state) => state.ListToAuthorizeAssigment
+  );
+
+  useEffect(() => {
+    const FetchData = () => {
+      dispatch(
+        GetListToAuthorizeAction({
+          nxpage: 15, //o.o
+          reg_inicio: 1, //o.o
+          reg_fin: 15, // o.o
+          linea_id: 20,
+          patron: "4455",
+          desde: "01-01-2021",
+          hasta: "01-01-2022",
+          sorteadores: [
+            { campo_id: 364 }, //	Cliente:
+            { campo_id: 365 }, //	N° de orden:
+            { campo_id: 366 }, //	Medidas del contenedor:
+            { campo_id: 367 }, //	Descripción de la carga:
+            { campo_id: 368 }, //	Lugar de la carga:
+            { campo_id: 369 }, //	Fecha
+          ],
+        })
+      );
+    };
+    FetchData();
+  }, [dispatch]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(ResetGetListToAuthorizeAction());
+    };
+  }, [dispatch]);
+
+  console.log("getListToAuthorizeAssigments", getListToAuthorizeAssigments);
+
   return (
     <React.Fragment>
       <div className="topBarBottomSideDashboard">

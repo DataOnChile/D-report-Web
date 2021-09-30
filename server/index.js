@@ -8,7 +8,11 @@ const path = require("path");
 // Routers
 const routes = require("./routes/index");
 const login = require("./routes/login/index");
-const users = require("./routes/home/index");
+// ROUTERS LISTAS
+const businessLines = require("./routes/home/index");
+const listPendingAssigments = require("./routes/home/index");
+const listToAuthorizeAssigments = require("./routes/home/index");
+const listFinalizedAssigments = require("./routes/home/index");
 
 const api = express();
 
@@ -25,13 +29,31 @@ api.use(
 );
 
 // Nota: primero como se llama acá y luego como se llama en la carpeta ruta
+
+// LOGIN
 api.use("/api/login", login.login);
-api.use("/api/userList", users.userList);
+
+// LISTAS
+api.use("/api/listBussinesLines", businessLines.listBusinessLines);
+api.use(
+  "/api/listPendingAssigments",
+  listPendingAssigments.listPendingAssigmentsRoute
+);
+api.use(
+  "/api/listToAuthorize",
+  listToAuthorizeAssigments.listToAuthorizeAssigmentsRoute
+);
+api.use(
+  "/api/listFinalizedAssigments",
+  listFinalizedAssigments.listFinalizedAssigmentsRoute
+);
 
 api.use("/", routes);
 // Server
 let server = api.listen(process.env.PORT || config.port, () =>
-  console.log(`server de paupi en ${process.env.PORT || config.port}`)
+  console.log(
+    `server de paupi ☆*:. o(≧▽≦)o .:*☆ en  ${process.env.PORT || config.port}`
+  )
 );
 
 server.timeout = 3000000;

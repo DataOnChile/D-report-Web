@@ -9,6 +9,7 @@ export const PostLogin = (obj) => async (dispatch) => {
     const { status } = response;
 
     let data = await response.data;
+    console.log(data)
 
     dispatch({
       type: "SUCESS_LOGIN",

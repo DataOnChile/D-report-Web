@@ -1,6 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import _ from "lodash";
+// import { Link } from "react-router-dom";
+
+// ACTION
+import {
+  GetListFinalizedAction,
+  ResetGetListFinalizedAction,
+} from "../../../actions/home/assigments/getListFinalizedAction";
 
 const Finalized = () => {
+  const dispatch = useDispatch();
+  const getListFinalizedAssigment = useSelector(
+    (state) => state.ListFinalizedAssigment
+  );
+
+  useEffect(() => {
+    const FetchData = () => {
+      dispatch(
+        GetListFinalizedAction({
+          nxpage: 15, //o.o
+          reg_inicio: 1, //o.o
+          reg_fin: 15, //o.o
+          linea_id: 20,
+          patron: "32",
+          desde: "18-08-2020",
+          hasta: "01-09-2020",
+          sorteadores: [
+            { campo_id: 21 }, //committed date
+            { campo_id: 19 }, // Description of the installation
+            { campo_id: 20 }, // Container size
+          ],
+        })
+      );
+    };
+    FetchData();
+  }, [dispatch]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(ResetGetListFinalizedAction());
+    };
+  }, [dispatch]);
+
+  console.log("getListFinalizedAssigmentDATA", getListFinalizedAssigment);
+
   return (
     <React.Fragment>
       <div className="topBarBottomSideDashboard">
@@ -8,7 +52,6 @@ const Finalized = () => {
           <p className="title">Asignaciones Finalizadas</p>
           <p className="subtitle">Listado de asignaciones finalizadas</p>
         </div>
-     
       </div>
       <div className="allAssigments">
         <div className="tableInformationAssigments">

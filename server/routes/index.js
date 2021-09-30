@@ -4,7 +4,7 @@ const path = require("path");
 const router = express.Router();
 
 /* Utilizamos esta ruta para conectar el build del cliente con el back - esto se utiliza para el modo producción */
-router.get("/*", function (res) {
+router.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "../../client/build", "index.html"));
 });
 

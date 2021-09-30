@@ -6,21 +6,26 @@ import { PostLogin } from "../../actions/login/loginAction";
 
 const Login = () => {
   const [form] = useState({
-    user: "mmunro@dataon.cl",
-    pass: "123456",
+    user: "test01@dreport.com",
+    pass: "Prueba01",
   });
   const state = useSelector((state) => state.Login);
 
   const dispatch = useDispatch();
+
   const handleLogin = () => {
     dispatch(
       PostLogin({
-        provider: "kantoor",
-        kantoor: { email: form.user, password: form.pass },
+        provider: "sistema",
+        facebook: { uid: "", name: "", token: "" },
+        //	"sistema": {"email": "{{email_tecnico}}", "password": "{{password_tecnico}}"}
+        //	"sistema": {"email": "alnuez3@gmail.com", "password": "Alnuez123"}
+        sistema: { email: form.user, password: form.pass },
       })
     );
   };
 
+ 
   let auth = localStorage.getItem("auth");
   let ruta = "/home";
   auth = auth === "true";

@@ -12,6 +12,12 @@ const Menu = () => {
           </Link>
         </div>
         <div className="eachPartMenu">
+          <div></div>
+          <Link  to="/home/dashboard/list-business-lines">
+            LISTA DE LINEAS
+          </Link>
+        </div>
+        <div className="eachPartMenu">
           <p>ASINACIONES</p>
         </div>
         <div className="eachPartMenu">

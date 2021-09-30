@@ -14,7 +14,7 @@ const LoginPage = () => {
           <img className="coverImg" alt="cover" src={cover} />
         </div>
       </div>
-      <Login />
+      <Login  />
     </div>
   );
 };

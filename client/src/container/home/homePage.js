@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route } from "react-router-dom";
+
 // COMPONENTS
 import Init from "../../components/home/init";
 import Menu from "../../components/home/menu";
@@ -11,14 +12,20 @@ import ToAuthorize from "../../components/home/assigments/toAuthorize";
 import Finalized from "../../components/home/assigments/finalized";
 import Instalator from "../../components/home/instalator";
 import Supervisor from "../../components/home/supervisor";
+import ListBusinessLines from "../../components/home/listBusinessLines";
+
 // COMPONENTS FORMS
 import FormNewAssigments from "../../components/home/forms/formNewAssigment";
 import FormNewInstalator from "../../components/home/forms/formNewInstalator";
 import FormNewSupervisor from "../../components/home/forms/formNewSupervisor";
+
+
 // ACTION
 import { ResetLogin } from "../../actions/login/loginAction";
 
+
 const HomePage = ({ history }) => {
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -79,6 +86,11 @@ const HomePage = ({ history }) => {
               exact
               path={`/home/dashboard/supervisor/new-supervisor`}
               component={FormNewSupervisor}
+            />
+            <Route
+              exact
+              path={`/home/dashboard/list-business-lines`}
+              render={() => <ListBusinessLines />}
             />
           </div>
         </div>
